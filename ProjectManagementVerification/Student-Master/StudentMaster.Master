@@ -1,0 +1,252 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMaster.master.cs" Inherits="ProjectManagementVerification.Student_Master.StudentMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="eLearning is a modern and fully responsive Template by WebThemez.">
+	<meta name="author" content="webThemez.com">
+
+	<title>
+        <asp:ContentPlaceHolder ID="Head" runat="server">
+        </asp:ContentPlaceHolder>
+	</title>
+    
+    <script src="../assets/js/jquery.js"></script> 
+    
+	<link rel="favicon" href="../assetsUI/images/favicon.png">
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../assetsUI/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assetsUI/css/font-awesome.min.css">
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="../assetsUI/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../assetsUI/css/da-slider.css" />
+	<link rel="stylesheet" href="../assetsUI/css/style.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--<link rel="stylesheet" href="../assetsUI/FUpload/bootstrap.css" />-->
+    
+	<link rel="stylesheet" href="../assetsUI/FUpload/bootstrap-fileupload.min.css"/>
+    
+	
+    <!--Custom CSS by Me-->
+    <link rel="stylesheet" href="../assetsUI/css/custom.me.css"/>
+    
+<link href="../assetsUI/global/css/components.css" rel="stylesheet">
+  
+
+	<link rel="stylesheet" href="../assetsUI/css/jquery-ui.css">
+    <script src="../assetsUI/js/jquery-ui.js"></script> 
+    
+    <!--[if lt IE 9]>
+        
+        <script src="../assetsUI/js/html5shiv.js"></script>
+	<script src="../assetsUI/js/respond.min.js"></script>
+	<![endif]-->
+    
+    
+    
+<!-- Fonts START -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+  <!-- Fonts END -->
+
+  <!-- Global styles START -->          
+  <link href="../assetsUI/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Global styles END --> 
+   
+  <!-- Page level plugin styles START -->
+  <!-- Page level plugin styles END -->
+
+  <!-- Theme styles START -->
+  <!-- Theme styles END -->
+    
+  
+    
+    
+    <style>
+        .inputValidator {
+           height: 18px; background-color:; font-size: 13px;
+        }
+        .inpHide {
+            height: 0px;
+        }
+
+        .btn2 {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse" style="z-index:100">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="index.html">
+					<img src="../assetsUI/images/logo.png" alt="Techro HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="ProjectsTask.aspx">Your Projects</a></li>
+					<li><a href="fees.html">Fees</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sidebar-right.html">Right Sidebar</a></li>
+							<li><a href="#">Dummy Link1</a></li>
+							<li><a href="#">Dummy Link2</a></li>
+							<li><a href="#">Dummy Link3</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a class="btn btn-info" style="color: #5bc0de;background-color: #fff;border-color: #46b8da;" href="contact.html">Register</a></li>
+                    <li></li>
+				</ul>
+                
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+    
+    
+       <div>
+
+	    <!-- Header Slide -->
+
+            <div class="row boxed">
+                    <div class="col-lg-12 profile-header">
+                        <div class="stats">
+                            <p class="stat"><span runat="server" ID="assignedTask" class="label label-info"></span> Assigned Tasks</p>
+                            <p class="stat"><span runat="server" ID="completedTask" class="label label-success"></span> Tasks</p>
+                            <p class="stat"><span runat="server" ID="workingTask" class="label label-default"></span> Overdue</p>
+                        </div>
+                        <h1>
+                            <asp:Label id="lblCurrentUserName" runat="server" Text="" />
+                        </h1>
+                        
+                        <ul class="breadcrumb">
+                            <li><a href="index.html">Home</a> </li>
+                            <li><a href="premium-users.html">Users</a> </li>
+                            <li class="active">Breanna Hayward</li>
+                        </ul>
+                    </div>
+                </div>
+
+            <asp:ContentPlaceHolder ID="Slide" runat="server">
+            </asp:ContentPlaceHolder>
+	    <!-- /Header -->
+
+
+
+        <!--Middle-->
+            <asp:ContentPlaceHolder ID="Middle" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        <!--End of Middle-->
+
+        </div>
+
+    
+    
+        <!--ContentBottom-->
+            <asp:ContentPlaceHolder ID="Bottom" runat="server">
+            </asp:ContentPlaceHolder>
+        <!--ContentBottom-->
+	
+	<footer id="footer">
+		<div class="container">
+			<div class="social text-center">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+			</div>
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> | 
+								<a href="about.html">About</a> |
+								<a href="courses.html">Courses</a> |
+								<a href="fees.html">Fees</a> |
+								<a href="portfolio.html">Portfolio</a> |
+								<a href="contact.html">Contact</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2014. Template by <a href="http://webthemez.com/" rel="develop">WebThemez.com</a>
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+	<script src="../assetsUI/js/modernizr-latest.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="../assetsUI/js/jquery.cslider.js"></script>
+	<script src="../assetsUI/js/custom.js"></script>
+
+
+    <script src="../assetsUI/frontend/layout/scripts/layout.js" type="text/javascript"></script>
+
+    
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            Layout.init();
+            Layout.initTwitter();
+        });
+    </script>
+<!--File Upload-->
+	<script src="../assetsUI/FUpload/jquery-2.0.3.min.js"></script>
+	<script src="../assetsUI/FUpload/bootstrap-fileupload.js"></script>
+<!--FileUpload-->
+</body>
+</html>
+
